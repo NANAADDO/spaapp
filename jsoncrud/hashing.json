@@ -23,6 +23,13 @@
         {
             "field": "title",
             "rules": "required|max:10"
+        },{
+
+
+            "rrr":"rr"
         }
+
+
+
     ]
 }
