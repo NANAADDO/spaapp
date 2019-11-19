@@ -22,7 +22,7 @@ class productController extends Controller
 
         if (!empty($keyword)) {
             $product = product::where('title', 'LIKE', "%$keyword%")
-                ->orWhere('content_ment', 'LIKE', "%$keyword%")
+                ->orWhere('content_men', 'LIKE', "%$keyword%")
                 ->orWhere('category', 'LIKE', "%$keyword%")
                 ->orWhere('user_id', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
@@ -30,7 +30,7 @@ class productController extends Controller
             $product = product::latest()->paginate($perPage);
         }
 
-        return view('product.index.list', compact('product'));
+        return view('product.index.lis', compact('product'));
     }
 
     /**
